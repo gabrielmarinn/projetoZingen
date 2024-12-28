@@ -1,0 +1,57 @@
+.py-base {
+    /* Definindo espaçamento interno no eixo Y */
+    padding-block: var(--py-base);
+  }
+  
+.py-lg {
+    /* Definindo espaçamento interno no eixo Y */
+    padding-block: var(--py-lg);
+  }
+  
+.py-xl {
+    /* Definindo espaçamento interno no eixo Y */
+    padding-block: var(--py-xl);
+  }
+  
+.px-lg {
+    /* Definindo espaçamento interno no eixo X */
+    padding-inline: var(--px-lg);
+  }
+
+.container {
+    /* Declarando variavel para conter o maximo de largura que permito */
+    --max-width: 375px;
+    /* Usando a função min para definir valores minimos e usar o segundo valor para subtrair do 100% e multiplica por 2 para verificar os dois lados da pagina*/
+    width: min(var(--max-width), 100% - var(--px-lg) * 2);
+    /* Espaçamento externo no eixo X */
+    margin-inline: auto;
+  }
+
+/* No app mobile oque for para ser exibido em desktop fica escondido */
+.desktop-only {
+    display: none;
+  }
+ 
+/* Definindo colunas constantes com display grid para termos espaçamento entre os elementos e manter um abaixo do outro */
+.even-columns {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  /* Responsividade alterando o valor width do container para 80rem */
+  @media (width >= 80em) {
+    .container {
+      --max-width: 80rem;
+    }
+
+    /* Aparecer o layout que foi criado para desktop */
+    .desktop-only {
+        display: initial;
+      }
+    
+    /* Definindo o grid-auto-flow como colunas e estabelecendo um tamanho para elas de 1fr para que fiquem um ao lado da outra de tamanho igual */
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+  }
