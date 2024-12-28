@@ -1,0 +1,92 @@
+.btn {
+    /* Variaveis criadas para uso do botão */
+    --btn-bg-color: var(--text-color-primary);
+    --btn-color: var(--background-color);
+    /* Retirando borda */
+    border: 0;
+    /* Definindo background como transparente */
+    background-color: transparent;
+    /* Display flex para mover o botão */
+    display: flex;
+    /* Alinhando no eixo X */
+    align-items: center;
+    /* Alinhando no eixo Y */
+    justify-content: center;
+    /* Encaixando a largura do botão de acordo com seu conteudo dentro dele */
+    width: fit-content;
+    /* Arredondamento de borda */
+    border-radius: 0.5rem;
+    /* Font */
+    font: var(--fw-md) var(--fs-base) / 1.5rem var(--font-family);
+    /* Quando estiver com o mouse em cima mudar seu comportamento para uma mão */
+    cursor: pointer;
+    /* Definindo background do botão */
+    background: var(--btn-bg-color);
+    /* Cor */
+    color: var(--btn-color);
+    }
+
+/* Quando estiver com o mouse em cima do botão ele mudar sua cor para um degrade */
+.btn:hover {
+    --btn-bg-color: linear-gradient(
+    90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
+);
+    --btn-color: var(--surface-color);
+}
+
+/* Estilizando botão pequeno (small) com espaçamento interno e tamanho de font */
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-sm);
+}
+
+/* Estilizando botão médio (medium) com espaçamento interno e tamanho de font */
+.btn-md {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--fs-base);
+}
+
+/* Estilizando botão grande (large) com espaçamento interno e tamanho de font */
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}
+
+/* Botão que conter aria-label aplique */
+.btn[aria-label] {
+    /* Posição relative para mover o botão */
+    position: relative;
+    
+/* Antes do conteudo real aplique */
+&::before {
+    /* Criando conteudo vazio com css */
+    content: '';
+    /* Posição absolute para que fique sobre todas as coisas em relação a esse botão */
+    position: absolute;
+    /* Arredondamento herdado */
+    border-radius: inherit;
+    /* Ajustando posição */
+    inset: 0.09375rem;
+    /* Cor de fundo */
+    background-color: var(--bg-color);
+}
+
+/* Após o conteudo real aplique  */
+&::after {
+    /* Criando um conteudo com o atributo aria-label */
+    content: attr(aria-label);
+    /* Cor de fundo */
+    background: var(--btn-bg-color);
+    /* Recorte do botão conforme o texto em seu interior */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Cor transparente */
+    color: transparent;
+    /* Posição relative para mover o botão */
+    position: relative;
+    /* Ajuste de posição no eixo Z (que seria mais proximo da tela e mais longe da tela) */
+    z-index: 1;
+    }
+}
