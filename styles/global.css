@@ -65,6 +65,8 @@ html {
 body {
     /* Definindo imagem de fundo para o body */
     background-color: var(--background-color);
+    /* Ajustando para que no eixo X não tenha nenhum tipo de transbordamento */
+    overflow-x: hidden;
 }
 
 h1,
