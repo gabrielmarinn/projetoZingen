@@ -58,6 +58,8 @@ html {
     color: var(--text-color-primary);
     /* Ajustando para que no eixo X não tenha nenhum tipo de transbordamento */
     overflow-x: hidden;
+    /* Definindo o scrool da pagina como mais suave */
+    scroll-behavior: smooth;
 }
 
 body {

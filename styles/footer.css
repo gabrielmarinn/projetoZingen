@@ -1,0 +1,69 @@
+footer {
+    /* Cor e peso de font */
+    color: var(--text-color-secondary);
+    font-weight: var(--fw-md);
+
+& .container {
+    /* Espaçamento interno direita e esquerda */
+    padding-inline: 3rem;
+}
+
+& .container,
+& .top {
+    /* Espaçamento entre os elementos */
+    gap: 3rem;
+}
+
+& nav.even-columns {
+    /* Espaçamento entre os elementos */
+    gap: 4rem;
+}
+
+& .top ul {
+    /* Alinhamento no eixo Y */
+    align-content: start;
+}
+
+& .title {
+    /* Tamanho da font, espaçamento entre letras, transform em caixa alta e cor */
+    font-size: 0.75rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: var(--brand-color-primary);
+}
+
+& .bottom {
+    /* Itens flexiveis podem utilizar varias linhas se for necessario */
+    flex-wrap: wrap;
+
+    & > div {
+    /* Espaçamento externo na direita */
+    margin-right: auto;
+    }
+
+    & span {
+    /* Tamanho de font */
+    font-size: 0.875rem;
+    }
+}
+
+/* Responsividade se sua largura for maior que 80rem aplica as seguintes configurações de espaçamento interno, template grid espaçamento externo e largura */
+@media (width >= 80em) {
+    .container {
+    padding-inline: 0;
+    padding-bottom: 2rem;
+    }
+
+    & .top {
+    grid-template-columns: auto 1fr;
+
+    & nav {
+        margin-left: auto;
+
+        & ul {
+        width: 14rem;
+        }
+    }
+    }
+}
+}
