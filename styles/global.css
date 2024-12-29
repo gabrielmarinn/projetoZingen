@@ -98,6 +98,21 @@ a {
     color: inherit;
 }
 
+/* Estilizando links ao passar o mouse em cima */
+a:hover {
+    /* Background degrade com 90 graus */
+    background: linear-gradient(
+    90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
+    );
+    /* Recorte do link conforme o texto em seu interior */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* cor transparente para que o recorte fique correto */
+    color: transparent;
+}
+
 /* role=list para que o navegador entenda que isso sempre sera uma lista retirando o padrao dele ou nao */
 ul[role='list'] {
     /* Retirando padrão de lista */

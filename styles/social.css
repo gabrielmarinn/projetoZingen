@@ -1,0 +1,59 @@
+a.social {
+    /* Criando conteudo vazio com css */
+    --bg-img: '';
+    /* Definindo imagem de fundo */
+    background-image: var(--bg-img);
+    /* Largura */
+    width: 1.5rem;
+    /* Altura */
+    height: 1.5rem;
+    /*  */
+    display: block;
+    /* Recorte do icone conforme o seu tamanho */
+    -webkit-background-clip: initial;
+    background-clip: initial;
+
+/* Estilizando o link que tiver um aria-label=tiktok dentro dele */
+&[aria-label='tiktok'] {
+    /* Icone tiktok */
+    --bg-img: url(../assets/icons/tiktok.svg);
+
+    /* Icone tiktok alterando sua cor ao passar o mouse em cima */
+    &:hover {
+    --bg-img: url(../assets/icons/tiktok-hover.svg);
+    }
+}
+
+/* Estilizando o link que tiver um aria-label=instagram dentro dele */
+&[aria-label='instagram'] {
+    /* Icone instagram */
+    --bg-img: url(../assets/icons/instagram.svg);
+
+    /* Icone instagram alterando sua cor ao passar o mouse em cima */
+    &:hover {
+    --bg-img: url(../assets/icons/instagram-hover.svg);
+    }
+}
+
+/* Estilizando o link que tiver um aria-label=twitter dentro dele */
+&[aria-label='twitter'] {
+    /* Icone twitter */
+    --bg-img: url(../assets/icons/twitter.svg);
+
+    /* Icone twitter alterando sua cor ao passar o mouse em cima */
+    &:hover {
+    --bg-img: url(../assets/icons/twitter-hover.svg);
+    }
+}
+
+/* Estilizando o link que tiver um aria-label=discord dentro dele */
+&[aria-label='discord'] {
+    /* Icone discord */
+    --bg-img: url(../assets/icons/discord.svg);
+
+    /* Icone discord alterando sua cor ao passar o mouse em cima */
+    &:hover {
+    --bg-img: url(../assets/icons/discord-hover.svg);
+    }
+}
+}
