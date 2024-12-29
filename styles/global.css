@@ -60,7 +60,7 @@ html {
 
 body {
     /* Definindo imagem de fundo para o body */
-    background-color: var(--bg-color);
+    background-color: var(--background-color);
 }
 
 h1,

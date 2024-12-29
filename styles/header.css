@@ -1,0 +1,6 @@
+header {
+    /* Estilizando o primeiro filho dos links com espaçamento externo a direita */
+    & a:first-child {
+      margin-right: auto;
+    }
+  }

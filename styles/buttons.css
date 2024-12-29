@@ -34,6 +34,11 @@
     var(--brand-color-primary) 100%
 );
     --btn-color: var(--surface-color);
+    /* Recorte do link conforme o texto em seu interior */
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    /* Cor */
+    color: var(--btn-color);
 }
 
 /* Estilizando botão pequeno (small) com espaçamento interno e tamanho de font */
@@ -90,3 +95,15 @@
     z-index: 1;
     }
 }
+
+/* Responsividade quando a largura for mais ou igual a 80em ele vai buscar o tamanho de fonte no root  */
+@media (width >= 80em) {
+    .btn-sm {
+      padding: 0.75rem 1.5rem;
+      font-size: var(--fs-base);
+    }
+    .btn-md {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+  }

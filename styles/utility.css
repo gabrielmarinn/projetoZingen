@@ -38,6 +38,32 @@
     gap: 1rem;
   }
   
+.flex {
+  /* Display flex para tornar elementos flexiveis */
+  display: flex;
+}
+
+.items-center {
+  /* Alinhamentos no eixo Y */
+  align-items: center;
+}
+
+.gap-1 {
+  /* Espaçamento de elementos */
+  gap: 1rem;
+}
+
+/* Como nao podemos usar o . para especificar o nome do gap foi usado a contra-barra para fazer isso */
+.gap-1\.5 {
+  /* Espaçamento de elementos */
+  gap: 1.5rem;
+}
+
+.grid {
+  /* Display grid para alinhamentos de elementos */
+  display: grid;
+}
+  
   /* Responsividade alterando o valor width do container para 80rem */
   @media (width >= 80em) {
     .container {
