@@ -56,6 +56,8 @@ html {
     line-height: 1.6;
     /* Cor */
     color: var(--text-color-primary);
+    /* Ajustando para que no eixo X não tenha nenhum tipo de transbordamento */
+    overflow-x: hidden;
 }
 
 body {

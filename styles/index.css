@@ -7,6 +7,7 @@
 @import url(sections.css);
 @import url(about.css);
 @import url(cards.css);
-@import url(pricing.css);
 /* Responsividade features so sera importado se sua largura for maior que 80rem */
 @import url(features.css) (width >= 80rem);
+@import url(pricing.css);
+@import url(download.css);

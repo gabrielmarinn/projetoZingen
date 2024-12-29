@@ -1,0 +1,37 @@
+#download {
+    .card {
+        /* Espaçamento interno de 3rem cima, 1.5rem laterais e 15rem baixo */
+        padding: 3rem 1.5rem 15rem;
+        /* Position relative dentro de dowload para ser posicionado */
+        position: relative;
+        & > img {
+            /* Estilizando largura posicao absolute dentro de card e posicionando baixo e direita */
+            width: 14.5rem;
+            position: absolute;
+            bottom: 0;
+            right: -3.5rem;
+        }
+    }
+
+.buttons {
+    /* flex-wrap: wrap para que o item seja deslocado para a linha debaixo se necessario */
+    flex-wrap: wrap;
+    /* Espaçamento externo em cima */
+    margin-top: 2rem;
+}
+
+/* Responsividade quando a largura for mais ou igual a 80em ele vai buscar o tamanho do espaçamento interno e largura no root  */
+@media (width >= 80em) {
+    .card {
+            padding: 8.75rem 5rem;
+
+            & > div:nth-child(1) {
+                max-width: 40rem;
+            }
+
+            & > img {
+                width: 29.125rem;
+            }
+        }
+    }
+}
