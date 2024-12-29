@@ -1,0 +1,11 @@
+.card {
+    /* Estilizando a classe card com cor de fundo, bordas e arredondamento de bordas */
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 1.5rem;
+  
+    & h3 {
+        /* Espaçamento externo em cima */
+      margin-top: 1rem;
+    }
+  }
