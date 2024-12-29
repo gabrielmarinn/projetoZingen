@@ -119,6 +119,13 @@ ul[role='list'] {
     list-style: none;
 }
 
+img {
+    /* Definindo como o tamanho maximo de imagem 100% o seu tamanho */
+    max-width: 100%;
+    /* Display inline-block para que possamos move e preencher espaçamentos em linha */
+    display: inline-block;
+}
+
 /* Responsividade quando a largura for mais ou igual a 80em ele vai buscar a font-size do :root */
 @media (width >= 80em) {
   :root {

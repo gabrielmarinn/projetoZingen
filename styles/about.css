@@ -1,0 +1,9 @@
+#about {
+    /* Cor de fundo */
+    background-color: var(--surface-color);
+  
+    /* Definindo como sempre em colunas com espaçamento entre os elementos */
+    & .even-columns {
+      gap: 2rem;
+    }
+  }

@@ -1,0 +1,38 @@
+#smartphones-img {
+    /* Espaçamento externo em cima */
+    margin-top: 5rem;
+    /* Imagem de fundo posicionado em cima e cobrindo todo seu espaço */
+    background: url(../assets/illustration.svg) top/cover;
+  }
+  
+  section {
+    /* Estilizando dentro de section o header e dentro do header o strong */
+    & header {
+      & strong {
+        /* Display block  */
+        display: block;
+        /* Font, espaçamento entre as letras, texto transformado em caixa alta e cor */
+        font: var(--fw-md) var(--fs-sm) / 100% var(--ff-sans);
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+        color: var(--brand-color-primary);
+      }
+  
+      & h2 {
+        /* Espaçamento externo */
+        margin-top: 0.5rem;
+      }
+    }
+  
+    & p {
+        /* Espaçamento externo em cima e cor */
+      margin-top: 0.5rem;
+      color: var(--text-color-secondary);
+    }
+  }
+  /* Responsividade quando a largura for maior ou igual a 80em ele vai buscar no root alterando a imagem com id #smartphone -img para display none para ficar escondida */
+  @media (width >= 80em) {
+    #smartphones-img {
+      display: none;
+    }
+  }
