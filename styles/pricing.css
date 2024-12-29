@@ -1,0 +1,154 @@
+#pricing {
+    /* Tamanho de fonte */
+    --fs-price: 2rem;
+
+    & header {
+        /* Texto alinhado ao centro */
+        text-align: center;
+    }
+
+    & .cards {
+        /* Espaçamento externo em cima */
+        margin-top: 2rem;
+    }
+
+    & h3 {
+        /* Tamanho de fonte e espaçamento externo */
+        font-size: 1.25rem;
+        margin-top: 0;
+    }
+
+    & .card p {
+        /* Espaçamento externo no p que esta dentro de card */
+        margin-top: 0.25rem;
+    }
+
+    & zin-pricing {
+        /* Estilizando com display block, espaçamento interno e modificando font */
+        display: block;
+        padding-block: 1.5rem;
+        font: var(--fw-bold) var(--fs-price) / 1.2 var(--font-family);
+    }
+
+    & zin-pricing small {
+        /* Estilizando font e cor */
+        font: var(--fw-base) 1rem/125% var(--font-family);
+        color: var(--text-color-secondary);
+    }
+
+    & .btn {
+        /* Largura */
+        width: 100%;
+    }
+
+    & .separator {
+        /* Altura */
+        height: 1px;
+        /*  */
+        margin-block: 2rem;
+        /* Fundo em degrade */
+        background: radial-gradient(
+        var(--text-color-secondary),
+        var(--surface-color) 70%
+        );
+    }
+
+    & li {
+        /* Estilizando cor, fundo e espaçamento interno a esquerda */
+        color: var(--text-color-secondary);
+        background: url(../assets/icons/Check.svg) no-repeat;
+        padding-left: 2rem;
+    }
+
+    & ul + small {
+        /* Display block para o small que tenha um ul antes dele e colocar espaçamento externo em cima, mudança de font e cor  */
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 0.875rem;
+        color: var(--text-color-secondary);
+    }
+
+    & .premium {
+        /* Position relative para mover premium no documento */
+        position: relative;
+
+        & .card {
+            /* Espaçamento interno em cima */
+            padding-top: 4.25rem;
+            
+            & > span {
+                /* Posição absolute dentro da caixa premium */
+                position: absolute;
+                /* Posicionamento do span em cima e esquerda */
+                top: 0;
+                left: 0;
+                /* Espaçamento interno */
+                padding: 0.75rem 2rem;
+                /* fundo em degrade */
+                background: linear-gradient(
+                90deg,
+                var(--brand-color-secondary) 0%,
+                var(--brand-color-primary) 100%
+                );
+                /* Arredondamento de borda cima-esquerda e baixo direita */
+                border-top-left-radius: 1.5rem;
+                border-bottom-right-radius: 1.5rem;
+                /* Mudança de font, transformado em caixa alta, espaçamento entre as letras e cor */
+                font: 600 var(--fs-sm) var(--font-family);
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                color: var(--bg-color);
+            }
+        }
+            /* Espaçamento interno para aparecer o elemento de traz */
+            padding: 2px;
+
+            &::before {
+                /* Criando um elemento vazio com a pseudo class ::before e content '' */
+                content: '';
+                /* Fundo degrade */
+                background: linear-gradient(
+                90deg,
+                var(--brand-color-secondary) 0%,
+                var(--brand-color-primary) 100%
+                );
+                /* Posição absolute dentro da caixa que estiver */
+                position: absolute;
+                /* Ajuste de posicao como 0 */
+                inset: 0;
+                /* Arredondamento de borda */
+                border-radius: 1.5rem;
+                /* Posicionando ele atraz de um outro elemento com o z-index */
+                z-index: -1;
+            }
+        
+    }
+
+
+    /* Responsividade se sua largura for maior que 80rem aplica as seguintes configurações */
+    @media (width >= 80em) {
+    --fs-price: 2.5rem;
+
+        & header {
+            /* No header largura maxima e espaçamento externo */
+            max-width: 50rem;
+            margin-inline: auto;
+        }
+
+        & .premium .card {
+            /* No card dentro de premium espaçamento interno baixo */
+            padding-bottom: 6rem;
+        }
+
+        .btn-md {
+            /* Espaçamento interno de 0.75rem em cima e baixo e 1.5rem nas laterais e troca de tamanho de font */
+            padding: 0.75rem 1.5rem;
+            font-size: var(--fs-base);
+        }
+
+        & .card:nth-child(3) .separator {
+            /* No 3 elemento de card com a classe separator espaçamento externo em block cima e baixo */
+            margin-block: 1.5rem;
+        }
+    }
+}
