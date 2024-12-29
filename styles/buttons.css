@@ -75,7 +75,7 @@
     /* Ajustando posição */
     inset: 0.09375rem;
     /* Cor de fundo */
-    background-color: var(--bg-color);
+    background-color: var(--background-color);
 }
 
 /* Após o conteudo real aplique  */

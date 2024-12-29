@@ -1,0 +1,55 @@
+#hero {
+    /* Centralizando texto eixo X */
+    text-align: center;
+  
+    /* Imagem de musica com largura definida sendo procurado pelo seletor src*="" */
+    & img[src*='music'] {
+      width: 12.875rem;
+    }
+  
+    & h1 {
+        /* Espaçamento externo */
+      margin-top: 1rem;
+    }
+  
+    & p {
+        /* Definindo font e espaçamento externo em cima */
+      font: var(--fw-md) var(--fs-lg) / 1.4 var(--ff-sans);
+      color: var(--text-color-secondary);
+      margin-top: 0.5rem;
+    }
+  
+    & .buttons {
+        /* Centralizando elemento no eixo X */
+      justify-content: center;
+      /* Espaçamento externo em cima */
+      margin-top: 2rem;
+    }
+  }
+  
+
+  /* Responsividade quando a largura for maior ou igual a 80em ele vai buscar no root mudança de background, imagem de musica, espaçamentos externos e internos e tamanho de font */
+  @media (width >= 80em) {
+    #hero {
+      background: url(../assets/bg-hero-desktop.svg) no-repeat bottom
+        center/contain;
+      padding-bottom: 15rem;
+  
+      & img[src*='music'] {
+        width: 25.75rem;
+      }
+  
+      & h1 {
+        margin-top: 1.5rem;
+      }
+  
+      & p {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+      }
+  
+      .buttons {
+        margin-top: 3rem;
+      }
+    }
+  }
